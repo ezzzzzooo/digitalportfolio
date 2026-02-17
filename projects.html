@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zoe Ong | Projects</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Zoe Ong</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-4">
+  <div class="d-flex flex-wrap justify-content-between align-items-end gap-2 mb-3">
+    <div>
+      <h1 class="h3 mb-1">Projects</h1>
+      <p class="text-muted mb-0">Case studies and selected work.</p>
+    </div>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4">
+      <div class="card shadow-sm h-100">
+        <div class="card-body p-4">
+          <span class="badge badge-soft rounded-pill mb-2">IT1x25</span>
+          <h5 class="mb-2">GenLink</h5>
+          <p class="text-muted">
+            A web platform to encourage meaningful interactions between youths and seniors.
+          </p>
+          <a class="btn btn-brand" href="project-genlink.html">View Case Study</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- If you have another project later, copy another card block here -->
+  </div>
+</main>
+
+<footer class="footer py-4 bg-white mt-5">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+    <small class="text-muted">© <span id="year"></span> Zoe Ong</small>
+    <small class="text-muted">Public access (no password) :contentReference[oaicite:2]{index=2}</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

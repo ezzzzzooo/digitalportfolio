@@ -1,0 +1,41 @@
+:root{
+  --brand: #ff8c61;
+}
+
+.hero {
+  background: linear-gradient(135deg, rgba(255,140,97,0.16), rgba(0,0,0,0));
+  border-radius: 18px;
+}
+
+.badge-soft{
+  background: rgba(255,140,97,0.14);
+  color: #8a2f12;
+  border: 1px solid rgba(255,140,97,0.25);
+}
+
+.section-title{
+  letter-spacing: 0.2px;
+}
+
+.card{
+  border-radius: 16px;
+}
+
+.navbar-brand{
+  font-weight: 700;
+}
+
+.btn-brand{
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+.btn-brand:hover{
+  filter: brightness(0.95);
+  color:#fff;
+}
+
+.footer{
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
