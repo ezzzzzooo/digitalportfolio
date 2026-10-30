@@ -1,170 +1,123 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Zoe Ong | Digital Portfolio</title>
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/style.css" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zoe Ong | Software Engineering Portfolio</title>
+<meta name="description" content="Zoe Ong, Applied AI and Analytics student at Nanyang Polytechnic. Full-stack and real-time web projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="index.html">Zoe Ong</a>
+  <ul>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li class="hide-sm"><a href="index.html#about">About</a></li>
+    <li class="hide-sm"><a href="index.html#contact">Contact</a></li>
+    <li><a class="btn btn-primary btn-sm" href="assets/Zoe_Ong_Resume.pdf" download>Resume</a></li>
+  </ul>
+</div></nav>
 
-<nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">Zoe Ong</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<main>
+<header class="hero"><div class="wrap">
+  <span class="eyebrow">Applied AI &amp; Analytics @ Nanyang Polytechnic</span>
+  <h1>I build things people <em>actually use.</em></h1>
+  <p class="lead">I'm Zoe, a full-stack developer who cares about the parts users never see: keeping their data private and making sure nothing breaks when things fail. I'm looking for a software engineering internship.</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="#projects">See my projects</a>
+    <a class="btn btn-ghost" href="assets/Zoe_Ong_Resume.pdf" download>Download resume</a>
+  </div>
+  <div class="stats">
+    <div><strong>2nd place</strong>AWS × NYP Hackathon 2026</div>
+    <div><strong>4 projects</strong>3 deployed live</div>
+    <div><strong>AWS award</strong>Student Builder Group</div>
+  </div>
+</div></header>
 
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto gap-lg-2">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
+<section id="projects"><div class="wrap">
+  <div class="section-head"><h2>Projects</h2><p>What I built, and the tricky parts I solved.</p></div>
+  <div class="grid">
+    <a class="card" href="projects/deadlineiq.html">
+  <span class="badge-award">🏆 2nd place, Assignment Deadline Tracker category</span>
+  <div class="meta">AWS × NYP Hackathon · 2026 · Team of 4</div>
+  <h3>DeadlineIQ <span style="font-weight:400;color:var(--muted)">— Academic deadline tracker</span></h3>
+  <p>A deadline tracker deployed live on AWS. I owned the reminders and notifications: smart, capped, and guaranteed never to message a student twice.</p>
+  <div class="tags"><span>AWS Lambda</span><span>DynamoDB</span><span>EventBridge</span><span>SNS</span><span>React</span></div>
+  <span class="more">Read case study →</span>
+</a><a class="card" href="projects/defects.html">
+  
+  <div class="meta">Team project · 2026</div>
+  <h3>Defects Inspection Platform <span style="font-weight:400;color:var(--muted)">— Real-time defect management</span></h3>
+  <p>A platform for reporting and fixing housing defects. I built the real-time layer and notifications, and found a bug that leaked one household's updates to their whole block.</p>
+  <div class="tags"><span>Node.js</span><span>Socket.IO</span><span>PostgreSQL</span><span>Supabase</span></div>
+  <span class="more">Read case study →</span>
+</a><a class="card" href="projects/nomnomz.html">
+  
+  <div class="meta">Individual project</div>
+  <h3>nomnomz <span style="font-weight:400;color:var(--muted)">— AI food-logging Telegram bot</span></h3>
+  <p>Send a photo of your meal, get a nutrition log back. A Python bot on a vision model, running 24/7 on a cloud server.</p>
+  <div class="tags"><span>Python</span><span>Claude vision API</span><span>SQLite</span><span>Telegram</span></div>
+  <span class="more">Read case study →</span>
+</a><a class="card" href="projects/genlink.html">
+  
+  <div class="meta">NYP Web Development · Team of 5</div>
+  <h3>Genlink <span style="font-weight:400;color:var(--muted)">— Intergenerational social platform</span></h3>
+  <p>A platform where youth, adults and seniors meet through shared interests. I built connections and the home page.</p>
+  <div class="tags"><span>Flask</span><span>MySQL</span><span>Socket.IO</span><span>Bootstrap</span></div>
+  <span class="more">Read case study →</span>
+</a>
+  </div>
+</div></section>
+
+<section id="about"><div class="wrap two-col">
+  <div>
+    <div class="section-head"><h2>Awards &amp; leadership</h2></div>
+    <div class="list">
+      <div class="item"><div><strong>2nd Place, Assignment Deadline Tracker category</strong><span>AWS × NYP Hackathon</span></div><div class="when">2026</div></div>
+      <div class="item"><div><strong>Outstanding Achievement Award</strong><span>AWS Student Builder Group at SIT</span></div><div class="when">Aug 2026</div></div>
+      <div class="item"><div><strong>Vice Captain</strong><span>NYP Women's Floorball</span></div><div class="when">2026 – now</div></div>
+    </div>
+    <div class="section-head" style="margin-top:48px"><h2>Education</h2></div>
+    <div class="list">
+      <div class="item"><div><strong>Diploma in Applied AI and Analytics</strong><span>Nanyang Polytechnic</span></div><div class="when">2025 – 2028</div></div>
+      <div class="item"><div><strong>SAS Academic Specialisation in Predictive Analytics &amp; Forecasting</strong><span>Tier 3 · SAS × NYP</span></div><div class="when">Oct 2026</div></div>
     </div>
   </div>
-</nav>
-
-<header class="container my-4">
-  <div class="p-4 p-md-5 hero">
-    <div class="row align-items-center g-4">
-      <div class="col-md-8">
-        <span class="badge badge-soft rounded-pill mb-3">IT1x25 Digital Portfolio</span>
-        <h1 class="display-6 mb-3">Hi, I’m <span style="color:var(--brand);">Zoe Ong</span>.</h1>
-        <p class="lead mb-3">
-          I’m an IT student interested in web development and user-centred design.
-          This portfolio showcases my project work, including my IT1x25 Web Development project.
-        </p>
-        <div class="d-flex gap-2 flex-wrap">
-          <a class="btn btn-brand btn-lg" href="projects.html">View Projects</a>
-          <a class="btn btn-outline-dark btn-lg" href="#about">About Me</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow-sm">
-          <div class="card-body">
-            <h5 class="mb-2">Quick Info</h5>
-            <ul class="mb-0">
-              <li>Skills: HTML, CSS, JS, Flask, MySQL</li>
-              <li>Main Project: GenLink</li>
-              <li>Focus: Usability + Full-stack</li>
-            </ul>
-          </div>
-        </div>
-      </div>
+  <div>
+    <div class="section-head"><h2>Skills</h2></div>
+    <dl class="skills">
+      <dt>Languages</dt><dd>Python, JavaScript, SQL, HTML, CSS</dd>
+      <dt>Web</dt><dd>React, Node.js, Express, Flask, Socket.IO, REST APIs, Tailwind, Bootstrap</dd>
+      <dt>Cloud &amp; data</dt><dd>AWS (Lambda, DynamoDB, EventBridge, SNS, CloudFront), PostgreSQL, MySQL, SQLite</dd>
+      <dt>AI &amp; analytics</dt><dd>Claude API (vision, tool calling), SAS, KNIME</dd>
+      <dt>Tools</dt><dd>Git, GitHub, Linux, systemd, VS Code</dd>
+    </dl>
+    <div class="section-head" style="margin-top:48px"><h2>Certifications</h2></div>
+    <div class="list">
+      <div class="item"><div><strong>AI4I – Literacy in AI</strong><span>AI Singapore</span></div><div class="when">2026</div></div>
+      <div class="item"><div><strong>Basic Proficiency in KNIME Analytics Platform</strong><span>KNIME</span></div><div class="when">2026</div></div>
+      <div class="item"><div><strong>AI Fluency: Framework &amp; Foundations</strong><span>Anthropic</span></div><div class="when">2025</div></div>
+      <div class="item"><div><strong>Web Development Fundamentals</strong><span>IBM SkillsBuild</span></div><div class="when">2025</div></div>
+      <div class="item"><div><strong>User Experience Design Fundamentals</strong><span>IBM SkillsBuild</span></div><div class="when">2025</div></div>
     </div>
   </div>
-</header>
+</div></section>
 
-<main class="container pb-4">
-
-  <section id="about" class="my-5">
-    <h2 class="section-title mb-3">About Me</h2>
-    <div class="row g-4">
-      <div class="col-lg-8">
-        <div class="card shadow-sm">
-          <div class="card-body p-4">
-            <p class="mb-0">
-              I am currently studying Information Technology and have experience building web applications
-              using HTML, CSS, JavaScript, Flask, and MySQL. Through coursework projects, I learned how to
-              design features, connect front-end pages to back-end logic, and work with databases to store and
-              retrieve data. I’m especially interested in creating systems that solve real user problems.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="card shadow-sm">
-          <div class="card-body p-4">
-            <h6 class="mb-2">Tech Stack</h6>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge text-bg-light border">HTML</span>
-              <span class="badge text-bg-light border">CSS</span>
-              <span class="badge text-bg-light border">JavaScript</span>
-              <span class="badge text-bg-light border">Flask</span>
-              <span class="badge text-bg-light border">MySQL</span>
-              <span class="badge text-bg-light border">Bootstrap</span>
-            </div>
-          </div>
-        </div>
-      </div>
+<section id="contact"><div class="wrap">
+  <div class="contact">
+    <h2>Let's talk.</h2>
+    <p>I'm looking for a software engineering internship. If you're hiring, or just want to chat about something I built, I'd love to hear from you.</p>
+    <div class="links">
+      <a class="btn btn-primary" href="mailto:zoeong08@gmail.com">zoeong08@gmail.com</a>
+      <a class="btn" href="https://www.linkedin.com/in/zoe-ong-720a711a9" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/ezzzzzooo" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="assets/Zoe_Ong_Resume.pdf" download>Resume (PDF)</a>
     </div>
-  </section>
-
-  <section class="my-5">
-    <h2 class="section-title mb-3">Featured Project</h2>
-    <div class="row g-4">
-      <div class="col-lg-7">
-        <div class="card shadow-sm">
-          <div class="card-body p-4">
-            <h4 class="mb-2">GenLink (IT1x25 Web Development Project)</h4>
-            <p class="mb-3">
-              A web platform designed to encourage meaningful interactions between youths and seniors.
-              Users can connect, view events, and communicate through the app.
-            </p>
-            <div class="d-flex gap-2 flex-wrap">
-              <a class="btn btn-brand" href="project-genlink.html">Read More</a>
-              <a class="btn btn-outline-dark" href="projects.html">All Projects</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-5">
-        <div class="card shadow-sm">
-          <div class="card-body p-4">
-            <h6 class="mb-2">Highlights</h6>
-            <ul class="mb-0">
-              <li>Login & registration</li>
-              <li>Connections + suggested users</li>
-              <li>Events + announcements</li>
-              <li>Messages / interaction</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="my-5">
-    <h2 class="section-title mb-3">Contact</h2>
-    <div class="row g-4">
-      <div class="col-lg-6">
-        <div class="card shadow-sm">
-          <div class="card-body p-4">
-            <p class="mb-2"><strong>Email:</strong> zoeong08@gmail.com</p>
-            <p class="mb-2"><strong>GitHub:</strong> https://github.com/ezzzzzooo</p>
-            <p class="mb-0"><strong>Portfolio:</strong> (this site link after publishing)</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="card shadow-sm">
-          <div class="card-body p-4">
-            <h6 class="mb-2">Note to Tutor</h6>
-            <p class="mb-0">
-              This portfolio is publicly accessible without a password as required. :contentReference[oaicite:1]{index=1}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  </div>
+</div></section>
 </main>
 
-<footer class="footer py-4 bg-white">
-  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
-    <small class="text-muted">© <span id="year"></span> Your Name</small>
-    <small class="text-muted">Built with Bootstrap</small>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<footer><div class="wrap">© 2026 Zoe Ong</div></footer>
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DeadlineIQ | Zoe Ong</title>
+<meta name="description" content="A deadline tracker deployed live on AWS. I owned the reminders and notifications: smart, capped, and guaranteed never to message a student twice.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<nav class="nav"><div class="wrap">
+  <a class="brand" href="../index.html">Zoe Ong</a>
+  <ul>
+    <li><a href="../index.html#projects">Projects</a></li>
+    <li class="hide-sm"><a href="../index.html#about">About</a></li>
+    <li class="hide-sm"><a href="../index.html#contact">Contact</a></li>
+    <li><a class="btn btn-primary btn-sm" href="../assets/Zoe_Ong_Resume.pdf" download>Resume</a></li>
+  </ul>
+</div></nav>
+
+<main><div class="wrap">
+  <a class="back" href="../index.html#projects">← All projects</a>
+  <header class="cs-hero">
+    <span class="badge-award">🏆 2nd place, Assignment Deadline Tracker category</span><br>
+    <h1>DeadlineIQ</h1>
+    <p class="lead">A deadline tracker deployed live on AWS. I owned the reminders and notifications: smart, capped, and guaranteed never to message a student twice.</p>
+    
+  </header>
+  <div class="facts"><div><small>Role</small>Notifications &amp; UX lead</div><div><small>Team</small>4 people</div><div><small>My share</small>7 of 23 use cases, ~4,700 lines</div><div><small>Stack</small>AWS serverless, React 19</div></div>
+  <article class="prose">
+<h2>The problem</h2>
+<p>Students juggle assignment deadlines across many modules. A tracker only helps if its reminders arrive at the right time, and don't turn into noise that gets ignored.</p>
+<h2>What I built</h2>
+<p>In a team of four, I owned the experience and notifications track, on a product deployed live on AWS.</p>
+<ul>
+  <li><strong>A reminder engine</strong> on EventBridge and Lambda, with six rule types in priority order, quiet hours, and a hard cap of three notifications a day. Anything over the cap goes into a daily digest instead.</li>
+  <li><strong>One place for delivery.</strong> All messages go through a single interface (SNS, with an SMTP fallback), so no feature has to know how messages are sent.</li>
+  <li><strong>A live calendar feed.</strong> A token-protected subscription feed that I hand-wrote to the iCalendar standard (RFC 5545), so deadlines stay up to date in Google, Apple or Outlook calendars instead of being a one-off download.</li>
+</ul>
+<h2>The tricky part: never notify twice</h2>
+<p>Cloud functions get retried when something fails. Without care, a retry means a student gets the same reminder twice, which is exactly the kind of noise that makes people mute an app.</p>
+<div class="callout"><p>I made every send <strong>idempotent</strong>: before sending, the function makes a conditional write keyed on the date, the task and the rule. If that record already exists, the send is skipped, so a retried function can't message the same student twice.</p></div>
+<p>I also wrote the reminder rules as a pure function that doesn't read the clock itself. That way every rule, quiet-hours case and cap scenario can be tested without waiting for real time to pass.</p>
+<h2>Result</h2>
+<p>DeadlineIQ placed <strong>2nd in the Assignment Deadline Tracker category</strong> at the AWS × NYP Hackathon 2026.</p>
+</article>
+  <div class="next"><span></span><a href="defects.html" style="text-align:right">Next →<strong>Defects Inspection Platform</strong></a></div>
+</div></main>
+
+<footer><div class="wrap">© 2026 Zoe Ong</div></footer>
+</body>
+</html>
