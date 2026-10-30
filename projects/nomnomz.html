@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>nomnomz | Zoe Ong</title>
 <meta name="description" content="Send a photo of your meal, get a nutrition log back. A Python bot on a vision model, running 24/7 on a cloud server.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -22,28 +24,34 @@
 <main><div class="wrap">
   <a class="back" href="../index.html#projects">← All projects</a>
   <header class="cs-hero">
-    
     <h1>nomnomz</h1>
     <p class="lead">Send a photo of your meal, get a nutrition log back. A Python bot on a vision model, running 24/7 on a cloud server.</p>
-    
   </header>
-  <div class="facts"><div><small>Role</small>Solo</div><div><small>Size</small>~900 lines of Python</div><div><small>Runs on</small>Cloud VM, 24/7</div><div><small>Stack</small>Python, Claude API, SQLite</div></div>
+  <div class="facts">
+    <div><small>Role</small>Solo</div>
+    <div><small>Size</small>~900 lines of Python</div>
+    <div><small>Runs on</small>Cloud VM, 24/7</div>
+    <div><small>Stack</small>Python, Claude API, SQLite</div>
+  </div>
   <article class="prose">
-<h2>The problem</h2>
-<p>Logging food is tedious, so most people stop doing it. The idea: make it as easy as taking a photo.</p>
-<h2>What I built</h2>
-<p>A Telegram bot: send it a photo of a meal, a nutrition label, or a quick text description, and it logs the nutrition for you. It runs 24/7 on a free-tier cloud server, run as a <code>systemd</code> service.</p>
-<h2>The tricky part: making AI output reliable</h2>
-<p>Vision models are good at estimating food, but free-text answers are hard for code to trust.</p>
-<div class="callout"><p>I used <strong>schema-constrained tool calling</strong>, so the model has to return a typed object (macros, serving size and a confidence score) rather than free text. One schema covers plated dishes, printed nutrition labels and typed entries.</p></div>
-<p>Estimates can still be wrong, so every one starts as a <strong>draft</strong>. The user confirms, corrects or cancels it before anything is saved.</p>
-<h2>Details I got right</h2>
-<ul>
-  <li>Database migrations are idempotent, so they're safe to run again on every start.</li>
-  <li>Times are stored in UTC and converted to local day boundaries, so a late-night snack lands on the right day.</li>
-</ul>
-</article>
-  <div class="next"><a href="defects.html">← Previous<strong>Defects Inspection Platform</strong></a><a href="genlink.html" style="text-align:right">Next →<strong>Genlink</strong></a></div>
+    <h2>The problem</h2>
+    <p>Logging food is tedious, so most people stop doing it. The idea: make it as easy as taking a photo.</p>
+    <h2>What I built</h2>
+    <p>A Telegram bot: send it a photo of a meal, a nutrition label, or a quick text description, and it logs the nutrition for you. It runs 24/7 on a free-tier cloud server, run as a <code>systemd</code> service.</p>
+    <h2>The tricky part: making AI output reliable</h2>
+    <p>Vision models are good at estimating food, but free-text answers are hard for code to trust.</p>
+    <div class="callout"><p>I used <strong>schema-constrained tool calling</strong>, so the model has to return a typed object (macros, serving size and a confidence score) rather than free text. One schema covers plated dishes, printed nutrition labels and typed entries.</p></div>
+    <p>Estimates can still be wrong, so every one starts as a <strong>draft</strong>. The user confirms, corrects or cancels it before anything is saved.</p>
+    <h2>Details I got right</h2>
+    <ul>
+      <li>Database migrations are idempotent, so they're safe to run again on every start.</li>
+      <li>Times are stored in UTC and converted to local day boundaries, so a late-night snack lands on the right day.</li>
+    </ul>
+  </article>
+  <div class="next">
+    <a href="defects.html">← Previous<strong>Defects Inspection Platform</strong></a>
+    <a href="genlink.html" class="next-right">Next →<strong>Genlink</strong></a>
+  </div>
 </div></main>
 
 <footer><div class="wrap">© 2026 Zoe Ong</div></footer>

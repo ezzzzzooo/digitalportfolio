@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Defects Inspection Platform | Zoe Ong</title>
 <meta name="description" content="A platform for reporting and fixing housing defects. I built the real-time layer and notifications, and found a bug that leaked one household's updates to their whole block.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -22,26 +24,32 @@
 <main><div class="wrap">
   <a class="back" href="../index.html#projects">← All projects</a>
   <header class="cs-hero">
-    
     <h1>Defects Inspection Platform</h1>
     <p class="lead">A platform for reporting and fixing housing defects. I built the real-time layer and notifications, and found a bug that leaked one household's updates to their whole block.</p>
-    
   </header>
-  <div class="facts"><div><small>Role</small>Real-time &amp; notifications</div><div><small>Type</small>Team project</div><div><small>Year</small>2026</div><div><small>Stack</small>Node.js, Socket.IO, Supabase</div></div>
+  <div class="facts">
+    <div><small>Role</small>Real-time &amp; notifications</div>
+    <div><small>Type</small>Team project</div>
+    <div><small>Year</small>2026</div>
+    <div><small>Stack</small>Node.js, Socket.IO, Supabase</div>
+  </div>
   <article class="prose">
-<h2>The problem</h2>
-<p>Residents report defects in their homes, managers assign them, and contractors fix them. Everyone needs to see updates as they happen, but only the updates that belong to them.</p>
-<h2>What I built</h2>
-<ul>
-  <li><strong>The real-time layer.</strong> A Socket.IO server that shares the app's Supabase login. When a user connects, they're placed into rooms based on their role, and before anyone joins a room for a specific record, the server checks the database that they're allowed to see it.</li>
-  <li><strong>Notifications that don't disappear.</strong> Before, system notifications vanished for anyone offline. I rebuilt them so they're saved like manager announcements, with one resolver that maps each group of recipients to both database rows and live socket rooms. I wired in about 20 lifecycle events and shipped the migration without needing to backfill old data.</li>
-  <li><strong>The contractor portal.</strong> An assigned job queue with acknowledge, rectify, hold and resume steps, plus photo and e-signature uploads.</li>
-</ul>
-<h2>The tricky part: a privacy bug</h2>
-<div class="callout"><p>I found that one household's defect updates were being <strong>broadcast to every resident in their block</strong>, and fixed it so updates only reach the people they belong to.</p></div>
-<p>I also found an unhandled promise rejection in a socket handler that would have crashed the server for every connected user. I hardened the handlers so one bad event can't take everyone down.</p>
-</article>
-  <div class="next"><a href="deadlineiq.html">← Previous<strong>DeadlineIQ</strong></a><a href="nomnomz.html" style="text-align:right">Next →<strong>nomnomz</strong></a></div>
+    <h2>The problem</h2>
+    <p>Residents report defects in their homes, managers assign them, and contractors fix them. Everyone needs to see updates as they happen, but only the updates that belong to them.</p>
+    <h2>What I built</h2>
+    <ul>
+      <li><strong>The real-time layer.</strong> A Socket.IO server that shares the app's Supabase login. When a user connects, they're placed into rooms based on their role, and before anyone joins a room for a specific record, the server checks the database that they're allowed to see it.</li>
+      <li><strong>Notifications that don't disappear.</strong> Before, system notifications vanished for anyone offline. I rebuilt them so they're saved like manager announcements, with one resolver that maps each group of recipients to both database rows and live socket rooms. I wired in about 20 lifecycle events and shipped the migration without needing to backfill old data.</li>
+      <li><strong>The contractor portal.</strong> An assigned job queue with acknowledge, rectify, hold and resume steps, plus photo and e-signature uploads.</li>
+    </ul>
+    <h2>The tricky part: a privacy bug</h2>
+    <div class="callout"><p>I found that one household's defect updates were being <strong>broadcast to every resident in their block</strong>, and fixed it so updates only reach the people they belong to.</p></div>
+    <p>I also found an unhandled promise rejection in a socket handler that would have crashed the server for every connected user. I hardened the handlers so one bad event can't take everyone down.</p>
+  </article>
+  <div class="next">
+    <a href="deadlineiq.html">← Previous<strong>DeadlineIQ</strong></a>
+    <a href="nomnomz.html" class="next-right">Next →<strong>nomnomz</strong></a>
+  </div>
 </div></main>
 
 <footer><div class="wrap">© 2026 Zoe Ong</div></footer>

@@ -162,3 +162,12 @@ footer { padding: 36px 0 48px; color: var(--muted); font-size: 14px; }
 .next { display: flex; justify-content: space-between; gap: 16px; margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line); flex-wrap: wrap; }
 .next a { text-decoration: none; color: var(--muted); }
 .next a strong { display: block; color: var(--ink); }
+
+/* Shared helpers */
+.card h3 .subtitle { font-weight: 400; color: var(--muted); }
+.section-head.spaced { margin-top: 48px; }
+.cs-hero .badge-award { display: table; }
+.cs-hero .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.demo-note { font-size: 14px; color: var(--muted); margin-top: 14px; }
+.demo-note code { font-family: var(--mono); }
+.next .next-right { text-align: right; }

@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Genlink | Zoe Ong</title>
 <meta name="description" content="A platform where youth, adults and seniors meet through shared interests. I built connections and the home page.">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
@@ -22,37 +24,45 @@
 <main><div class="wrap">
   <a class="back" href="../index.html#projects">← All projects</a>
   <header class="cs-hero">
-    
     <h1>Genlink</h1>
     <p class="lead">A platform where youth, adults and seniors meet through shared interests. I built connections and the home page.</p>
-    <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap">
-  <a class="btn btn-primary" href="https://genlink-283z.onrender.com" target="_blank" rel="noopener">Live demo</a>
-  <a class="btn btn-ghost" href="https://github.com/mahdiyaa/WDP_PROJECT_FINAL" target="_blank" rel="noopener">Source code</a>
-</div>
-<p style="font-size:14px;color:var(--muted);margin-top:14px">Demo login: <code style="font-family:var(--mono)">demo</code> / <code style="font-family:var(--mono)">Demo@1234</code>. It runs on a free server, so the first load can take up to a minute.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="https://genlink-283z.onrender.com" target="_blank" rel="noopener">Live demo</a>
+      <a class="btn btn-ghost" href="https://github.com/mahdiyaa/WDP_PROJECT_FINAL" target="_blank" rel="noopener">Source code</a>
+    </div>
+    <p class="demo-note">Demo login: <code>demo</code> / <code>Demo@1234</code>. It runs on a free server, so the first load can take up to a minute.</p>
   </header>
-  <div class="facts"><div><small>My part</small>Connections &amp; home page</div><div><small>Team</small>5 people</div><div><small>Module</small>NYP Web Development</div><div><small>Stack</small>Flask, MySQL, Socket.IO</div></div>
+  <div class="facts">
+    <div><small>My part</small>Connections &amp; home page</div>
+    <div><small>Team</small>5 people</div>
+    <div><small>Module</small>NYP Web Development</div>
+    <div><small>Stack</small>Flask, MySQL, Socket.IO</div>
+  </div>
   <article class="prose">
-<h2>The problem</h2>
-<p>In Singapore, youth and seniors often live in the same estates but rarely talk. It isn't hostility; there's just no shared space. Generic social networks don't help, because they connect people who are already alike.</p>
-<p>Genlink is built around the one thing that crosses generations: a shared interest. Users share stories, join events, chat, and even play chess together.</p>
-<h2>What I built</h2>
-<p>In a team of five, I owned <strong>connections</strong> and the <strong>home page</strong>.</p>
-<ul>
-  <li><strong>Connection requests</strong>: send, accept, reject, cancel and remove, all as JSON endpoints so the page updates instantly without reloading.</li>
-  <li><strong>Discovery across generations.</strong> Search by name with a filter for youth, adults and seniors. The filter exists so people can deliberately connect <em>across</em> age groups, not just within their own.</li>
-  <li><strong>A personalised home page</strong> that shows the interests each user picked at signup and a preview of recent stories from their connections.</li>
-</ul>
-<h2>Who built what</h2>
-<p>Teammates built authentication, the storyboard, events, messaging and chess. This page focuses on my part.</p>
+    <h2>The problem</h2>
+    <p>In Singapore, youth and seniors often live in the same estates but rarely talk. It isn't hostility; there's just no shared space. Generic social networks don't help, because they connect people who are already alike.</p>
+    <p>Genlink is built around the one thing that crosses generations: a shared interest. Users share stories, join events, chat, and even play chess together.</p>
+    <h2>What I built</h2>
+    <p>In a team of five, I owned <strong>connections</strong> and the <strong>home page</strong>.</p>
+    <ul>
+      <li><strong>Connection requests</strong>: send, accept, reject, cancel and remove, all as JSON endpoints so the page updates instantly without reloading.</li>
+      <li><strong>Discovery across generations.</strong> Search by name with a filter for youth, adults and seniors. The filter exists so people can deliberately connect <em>across</em> age groups, not just within their own.</li>
+      <li><strong>A personalised home page</strong> that shows the interests each user picked at signup and a preview of recent stories from their connections.</li>
+    </ul>
+    <h2>Who built what</h2>
+    <p>Teammates built authentication, the storyboard, events, messaging and chess. This page focuses on my part.</p>
 
-<h2>Screenshots</h2>
-<div class="shots">
-  <figure><img src="../assets/img/connections.jpg" alt="Genlink connections page with search, age-group filter, requests and suggested connections" loading="lazy"><figcaption>Connections page: search with an age-group filter, your connections, incoming and outgoing requests, and suggestions.</figcaption></figure>
-  <figure><img src="../assets/img/home2.jpg" alt="Genlink home page connections panel" loading="lazy"><figcaption>Home page: your connections and suggested people at a glance.</figcaption></figure>
-  <figure><img src="../assets/img/home.jpg" alt="Genlink home page with welcome banner and announcements" loading="lazy"><figcaption>Home page: welcome banner, story upload prompt and announcements.</figcaption></figure>
-</div></article>
-  <div class="next"><a href="nomnomz.html">← Previous<strong>nomnomz</strong></a><span></span></div>
+    <h2>Screenshots</h2>
+    <div class="shots">
+      <figure><img src="../assets/img/connections.jpg" alt="Genlink connections page with search, age-group filter, requests and suggested connections" loading="lazy"><figcaption>Connections page: search with an age-group filter, your connections, incoming and outgoing requests, and suggestions.</figcaption></figure>
+      <figure><img src="../assets/img/home2.jpg" alt="Genlink home page connections panel" loading="lazy"><figcaption>Home page: your connections and suggested people at a glance.</figcaption></figure>
+      <figure><img src="../assets/img/home.jpg" alt="Genlink home page with welcome banner and announcements" loading="lazy"><figcaption>Home page: welcome banner, story upload prompt and announcements.</figcaption></figure>
+    </div>
+  </article>
+  <div class="next">
+    <a href="nomnomz.html">← Previous<strong>nomnomz</strong></a>
+    <span></span>
+  </div>
 </div></main>
 
 <footer><div class="wrap">© 2026 Zoe Ong</div></footer>
